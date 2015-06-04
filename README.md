@@ -1,0 +1,9 @@
+This plugin provides header and footer links required for AgriLife websites using Genesis child themes (excluding AgriFlex3).
+
+To install dependencies:
+1. Open the command line and navigate to this repo's directory
+2. Type "npm run once" and press enter
+
+That's it! Your SASS file will compile to CSS every time you save it.
+
+To watch your SASS, follow the steps above but for Step 2 type "npm run watch" instead.

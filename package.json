@@ -1,0 +1,23 @@
+{
+  "name": "AgriLife_Required_Links",
+  "version": "1.0.0",
+  "description": "WordPress Plugin of required DOM elements for AgriFlex 3, a child theme of Genesis.",
+  "main": "agrilife-required-links.php",
+	"devDependencies": {
+		"compass": "~0.1.1"
+	},
+	"scripts": {
+		"once": "npm run once:packages && npm run once:compass && npm run watch",
+		"once:packages": "npm install",
+		"once:compass": "compass create --css-dir css --sass-dir css/src --images-dir images --output-style expanded --relative-assets --quiet --bare",
+		
+		"build": "npm run build:css -s",
+		"build:css": "compass compile",
+		
+		"watch": "npm run watch:css -s",
+		"watch:css": "nodemon --quiet --watch css/ --ext scss --exec 'npm run build:css'"
+	},
+  "author": "Zach Watkins",
+  "license": "GPL2+",
+  "readmeFilename": "README.md"
+}
