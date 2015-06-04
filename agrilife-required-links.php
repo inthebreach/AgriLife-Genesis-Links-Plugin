@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: AgriLife Required Links
- * Plugin URI: https://github.com/AgriLife/agrilife-required-links
+ * Plugin URI: https://github.com/AgriLife/AgriLife-Genesis-Links-Plugin
  * Description: Required links in the header and footer for AgriLife websites
  * Version: 1.0
  * Author: Zach Watkins
