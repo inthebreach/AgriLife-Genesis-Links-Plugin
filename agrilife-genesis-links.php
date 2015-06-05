@@ -13,7 +13,7 @@
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) or die( 'access denied' );
 
-define( 'ARL_DIRNAME', 'agrilife-required-links' );
+define( 'ARL_DIRNAME', 'agrilife-genesis-links' );
 define( 'ARL_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ARL_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'ARL_DIR_FILE', __FILE__ );
