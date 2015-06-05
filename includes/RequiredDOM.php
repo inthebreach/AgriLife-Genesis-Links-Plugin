@@ -43,8 +43,8 @@ class RequiredDOM {
     public function add_skip_nav_link()
     {
         ?>
-        <div class="skip-link screen-reader-text">
-        <a href="#content" title="Skip to content">Skip to content</a>
+        <div class="agl-skip-link">
+        <a href="#content" title="Skip to content" tabindex="1">Skip to content</a>
         </div>
         <?php
     }
