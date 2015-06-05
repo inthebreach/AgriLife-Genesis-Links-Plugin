@@ -6,6 +6,8 @@ class RequiredDOM {
 
         add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 
+        add_action( 'wp_head', array( $this, 'add_required_skip_nav_link') );
+
         add_action( 'genesis_before', array( $this, 'add_required_head_content'), 2 );
 
         add_action( 'genesis_setup', array( $this, 'remove_default_footer' ) );
@@ -31,6 +33,18 @@ class RequiredDOM {
      */
     function remove_default_footer() {
         remove_action( 'genesis_footer', 'genesis_do_footer' );
+    }
+
+    /**
+     * Provides the skip links
+     *
+     * @return HTML
+     */
+    public function add_required_skip_nav_link()
+    {
+        ?>
+        <a href="#content">Skip to main content</a>
+        <?php
     }
 
     /**

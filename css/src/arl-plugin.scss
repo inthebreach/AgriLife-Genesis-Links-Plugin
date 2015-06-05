@@ -4,8 +4,21 @@ $nav-item-bgcolor: #5E564E;
 $nav-item-pipe-width: 28;
 $nav-item-bgoffset-x: 12;
 
+/* Accessibility
+--------------------------------------------- */
+.screen-reader-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
 
-
+/* Header and Footer Navigation
+--------------------------------------------- */
 .agency-bar, .college-title {
   display: none!important;
 }
