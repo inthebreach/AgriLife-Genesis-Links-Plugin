@@ -19,16 +19,11 @@ $nav-item-bgoffset-x: 12;
 
 /* Header and Footer Navigation
 --------------------------------------------- */
-.agency-bar, .college-title {
-  display: none!important;
-}
-
-.arl-agency-bar.executiveprotheme {
-  position: relative;
-}
-
-.arl-agency-bar {
+.agl-agency-bar {
   display: none;
+  &.executiveprotheme {
+    position: relative;
+  }
 }
 
 .site-footer {
@@ -75,7 +70,7 @@ $nav-item-bgoffset-x: 12;
 //@media #{$medium-up} {
 @media only screen and (min-width: 45.063em) {
 
-  .arl-agency-bar {
+  .agl-agency-bar {
     margin: 0 auto;
     width: 100%;
     overflow: hidden;
@@ -229,14 +224,14 @@ $nav-item-bgoffset-x: 12;
 }
 
 @media only screen and (max-width: 1023px) {
-  .arl-agency-bar.altitudeprotheme {
+  .agl-agency-bar.altitudeprotheme {
     position: static;
   }
 }
 
 //@media #{$medium-up-common}{
 @media only screen and (min-width: 970px) {
-  .arl-agency-bar {
+  .agl-agency-bar {
     ul {
       left: 220px;
     }
@@ -246,7 +241,7 @@ $nav-item-bgoffset-x: 12;
 //@media #{$large-up}{
 @media only screen and (min-width: 1140px) {
 
-  .arl-agency-bar ul {
+  .agl-agency-bar ul {
     left: 204px;
   }
 

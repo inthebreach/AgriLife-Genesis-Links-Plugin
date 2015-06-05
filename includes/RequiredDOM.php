@@ -6,7 +6,7 @@ class RequiredDOM {
 
         add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 
-        add_action( 'wp_head', array( $this, 'add_required_skip_nav_link') );
+        add_action( 'wp_head', array( $this, 'add_skip_nav_link') );
 
         add_action( 'genesis_before', array( $this, 'add_required_head_content'), 2 );
 
@@ -22,8 +22,8 @@ class RequiredDOM {
      * @return HTML
      */
     function register_plugin_styles() {
-        wp_register_style( 'arl-plugin', plugins_url( 'agrilife-required-links/css/arl-plugin.css' ) );
-        wp_enqueue_style( 'arl-plugin' );
+        wp_register_style( 'aglinks-plugin', AGL_DIR_URL . 'css/aglinks.css' );
+        wp_enqueue_style( 'aglinks-plugin' );
     }
 
     /**
@@ -40,10 +40,12 @@ class RequiredDOM {
      *
      * @return HTML
      */
-    public function add_required_skip_nav_link()
+    public function add_skip_nav_link()
     {
         ?>
-        <a href="#content">Skip to main content</a>
+        <div class="skip-link screen-reader-text">
+        <a href="#content" title="Skip to content">Skip to content</a>
+        </div>
         <?php
     }
 
@@ -56,7 +58,7 @@ class RequiredDOM {
     {
         $arltheme = wp_get_theme()->get('Name');
         ?>
-        <div class="arl-agency-bar <?php echo strtolower(str_replace(' ', '', $arltheme)); ?>">
+        <div class="agl-agency-bar <?php echo strtolower(str_replace(' ', '', $arltheme)); ?>">
             <div class="agency-wrap">
                 <ul>
                     <li class="tfs-item"><a href="http://texasforestservice.tamu.edu/"><span>Texas A&amp;M Forest Service</span></a></li>

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "WordPress Plugin of required DOM elements for AgriFlex 3, a child theme of Genesis.",
   "main": "agrilife-required-links.php",
+  "repository": "https://github.com/AgriLife/AgriLife-Genesis-Links-Plugin",
 	"devDependencies": {
 		"compass": "~0.1.1"
 	},

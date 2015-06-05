@@ -13,13 +13,13 @@
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) or die( 'access denied' );
 
-define( 'ARL_DIRNAME', 'agrilife-genesis-links' );
-define( 'ARL_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'ARL_DIR_URL', plugin_dir_url( __FILE__ ) );
-define( 'ARL_DIR_FILE', __FILE__ );
+define( 'AGL_DIRNAME', 'agrilife-genesis-links' );
+define( 'AGL_DIR_PATH', plugin_dir_path( __FILE__ ) );
+define( 'AGL_DIR_URL', plugin_dir_url( __FILE__ ) );
+define( 'AGL_DIR_FILE', __FILE__ );
 
 // Load the plugin assets
-require_once plugin_dir_path( __FILE__ ) . 'includes/RequiredDOM.php';
+require_once AGL_DIR_PATH . 'includes/RequiredDOM.php';
 $arl_DOM = new RequiredDOM;
 
 ?>
