@@ -1,4 +1,4 @@
-This plugin provides header and footer links required for AgriLife websites using Genesis child themes (excluding AgriFlex3).
+This plugin provides the header links, footer links, and a "skip navigation" link (for accessibility) required for AgriLife websites using Genesis child themes (excluding AgriFlex3).
 
 To install dependencies:
 1. Open the command line and navigate to this repo's directory
