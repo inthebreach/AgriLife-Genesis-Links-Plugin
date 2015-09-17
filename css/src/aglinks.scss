@@ -115,10 +115,10 @@ $nav-item-bgoffset-x: 12;
 
     ul {
       margin: 0;
-      position: absolute;
+      text-align: center;
 
       li {
-        float: left;
+        display: inline-block;
         position: relative;
         z-index: 5;
 
@@ -235,22 +235,4 @@ $nav-item-bgoffset-x: 12;
   .agl-agency-bar.altitudeprotheme {
     position: static;
   }
-}
-
-//@media #{$medium-up-common}{
-@media only screen and (min-width: 970px) {
-  .agl-agency-bar {
-    ul {
-      left: 220px;
-    }
-  }
-}
-
-//@media #{$large-up}{
-@media only screen and (min-width: 1140px) {
-
-  .agl-agency-bar ul {
-    left: 204px;
-  }
-
 }
