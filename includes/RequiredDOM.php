@@ -102,7 +102,6 @@ class RequiredDOM {
                     <noscript><img src="//agrilifecdn.tamu.edu/wp-content/themes/AgriLife-Beta/images/footer-tamus.png" title="Texas A&amp;M University System Member" alt="Texas A&amp;M University System Member" /></noscript></a>
                 </div>
             </div>
-        </footer>
         <?php
     }
 }

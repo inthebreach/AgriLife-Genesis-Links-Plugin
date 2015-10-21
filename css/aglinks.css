@@ -1,6 +1,6 @@
 /* Accessibility
 --------------------------------------------- */
-/* line 9, src/aglinks.scss */
+/* line 10, src/aglinks.scss */
 .agl-skip-link a {
   border: 0;
   clip: rect(0 0 0 0);
@@ -11,7 +11,7 @@
   width: 1px;
   height: 1px;
 }
-/* line 18, src/aglinks.scss */
+/* line 19, src/aglinks.scss */
 .agl-skip-link a:focus {
   clip: auto;
   position: static;
@@ -23,31 +23,45 @@
 
 /* Header and Footer Navigation
 --------------------------------------------- */
-/* line 30, src/aglinks.scss */
+/* line 31, src/aglinks.scss */
 .agl-agency-bar {
   display: none;
 }
-/* line 32, src/aglinks.scss */
+/* line 33, src/aglinks.scss */
 .agl-agency-bar.executiveprotheme {
   position: relative;
 }
 
 /* line 39, src/aglinks.scss */
+.site-footer .wrap .wrap {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 43, src/aglinks.scss */
+.site-footer .wrap .wrap .footer-container {
+  padding-left: 0;
+}
+/* line 46, src/aglinks.scss */
+.site-footer .wrap .wrap .footer-container-tamus {
+  padding-right: 0;
+}
+/* line 50, src/aglinks.scss */
 .site-footer ul {
   margin-left: 0;
   margin-bottom: 1.25rem;
   font-size: 1rem;
   line-height: 1.6;
   list-style-position: outside;
+  list-style-type: none;
 }
-/* line 51, src/aglinks.scss */
+/* line 63, src/aglinks.scss */
 .site-footer .footer-container {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
   float: left;
 }
-/* line 59, src/aglinks.scss */
+/* line 71, src/aglinks.scss */
 .site-footer .footer-container-tamus {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -55,17 +69,17 @@
   float: left;
   height: 82px;
 }
-/* line 68, src/aglinks.scss */
+/* line 80, src/aglinks.scss */
 .site-footer .footer-tamus {
   border: 2px solid #f8f8f8;
 }
-/* line 72, src/aglinks.scss */
+/* line 84, src/aglinks.scss */
 .site-footer p {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 45.063em) {
-  /* line 81, src/aglinks.scss */
+  /* line 93, src/aglinks.scss */
   .agl-agency-bar {
     margin: 0 auto;
     width: 100%;
@@ -76,48 +90,65 @@
     display: block;
     position: absolute;
   }
-  /* line 91, src/aglinks.scss */
+  /* line 103, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme {
     height: 37px;
   }
-  /* line 93, src/aglinks.scss */
+  /* line 105, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme ~ .site-container .site-header {
     top: 36px;
   }
-  /* line 95, src/aglinks.scss */
+  /* line 107, src/aglinks.scss */
   .admin-bar .agl-agency-bar.altitudeprotheme ~ .site-container .site-header {
     top: 68px;
   }
-  /* line 98, src/aglinks.scss */
+  /* line 110, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme ~ .site-container .site-header.dark {
     top: 0;
   }
-  /* line 100, src/aglinks.scss */
+  /* line 112, src/aglinks.scss */
   .admin-bar .agl-agency-bar.altitudeprotheme ~ .site-container .site-header.dark {
     top: 32px;
   }
-  /* line 106, src/aglinks.scss */
+  /* line 119, src/aglinks.scss */
+  .agl-agency-bar.texas4-h {
+    position: relative;
+    background-color: #272827;
+  }
+  /* line 123, src/aglinks.scss */
+  .agl-agency-bar.texas4-h .agency-wrap {
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+  /* line 129, src/aglinks.scss */
+  .agl-agency-bar.texas4-h .agency-wrap ul li:after {
+    background-color: #272827;
+    transform: none;
+    box-shadow: none;
+  }
+  /* line 137, src/aglinks.scss */
   .agl-agency-bar .agency-wrap {
     padding-left: 1rem;
     padding-right: 1rem;
     float: left;
     margin-left: auto;
     margin-right: auto;
-    float: none;
     width: 71.25rem;
   }
-  /* line 116, src/aglinks.scss */
+  /* line 146, src/aglinks.scss */
   .agl-agency-bar ul {
     margin: 0;
-    position: absolute;
+    text-align: center;
   }
-  /* line 120, src/aglinks.scss */
+  /* line 150, src/aglinks.scss */
   .agl-agency-bar ul li {
-    float: left;
+    display: inline-block;
     position: relative;
     z-index: 5;
   }
-  /* line 125, src/aglinks.scss */
+  /* line 155, src/aglinks.scss */
   .agl-agency-bar ul li:after {
     content: "";
     display: block;
@@ -131,11 +162,11 @@
     box-shadow: 0 0 10px #222;
     background: #5E564E;
   }
-  /* line 138, src/aglinks.scss */
+  /* line 168, src/aglinks.scss */
   .agl-agency-bar ul li:hover:after {
     background-color: #4F5628;
   }
-  /* line 142, src/aglinks.scss */
+  /* line 172, src/aglinks.scss */
   .agl-agency-bar ul li a {
     background: url("../img/agency-nav.png") no-repeat 12px 0;
     cursor: pointer;
@@ -148,81 +179,81 @@
     z-index: 2;
     transition: none 300ms ease-out;
   }
-  /* line 154, src/aglinks.scss */
+  /* line 184, src/aglinks.scss */
   .agl-agency-bar ul li a:hover {
     opacity: 1;
   }
-  /* line 159, src/aglinks.scss */
+  /* line 189, src/aglinks.scss */
   .agl-agency-bar ul li.tvmdl-item {
     z-index: 4;
   }
-  /* line 161, src/aglinks.scss */
+  /* line 191, src/aglinks.scss */
   .agl-agency-bar ul li.tvmdl-item:hover:after {
     background-color: #8C5933;
   }
-  /* line 164, src/aglinks.scss */
+  /* line 194, src/aglinks.scss */
   .agl-agency-bar ul li.tvmdl-item a {
     width: 100px;
     background-position: 12px -36px;
   }
-  /* line 170, src/aglinks.scss */
+  /* line 200, src/aglinks.scss */
   .agl-agency-bar ul li.ext-item {
     z-index: 3;
   }
-  /* line 172, src/aglinks.scss */
+  /* line 202, src/aglinks.scss */
   .agl-agency-bar ul li.ext-item:hover:after {
     background-color: #1B607B;
   }
-  /* line 175, src/aglinks.scss */
+  /* line 205, src/aglinks.scss */
   .agl-agency-bar ul li.ext-item a {
     width: 111px;
     background-position: 12px -72px;
   }
-  /* line 181, src/aglinks.scss */
+  /* line 211, src/aglinks.scss */
   .agl-agency-bar ul li.res-item {
     z-index: 2;
   }
-  /* line 183, src/aglinks.scss */
+  /* line 213, src/aglinks.scss */
   .agl-agency-bar ul li.res-item:hover:after {
     background-color: #5C8C39;
   }
-  /* line 186, src/aglinks.scss */
+  /* line 216, src/aglinks.scss */
   .agl-agency-bar ul li.res-item a {
     width: 109px;
     background-position: 12px -108px;
   }
-  /* line 192, src/aglinks.scss */
+  /* line 222, src/aglinks.scss */
   .agl-agency-bar ul li.college-item {
     z-index: 1;
   }
-  /* line 194, src/aglinks.scss */
+  /* line 224, src/aglinks.scss */
   .agl-agency-bar ul li.college-item:hover:after {
     background-color: #5C0025;
   }
-  /* line 197, src/aglinks.scss */
+  /* line 227, src/aglinks.scss */
   .agl-agency-bar ul li.college-item a {
     background-position: 12px -144px;
   }
 
-  /* line 207, src/aglinks.scss */
+  /* line 237, src/aglinks.scss */
   .site-footer .footer-container {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 83.33333%;
     float: left;
   }
-  /* line 215, src/aglinks.scss */
+  /* line 245, src/aglinks.scss */
   .site-footer .footer-container-tamus {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 16.66667%;
     float: right;
   }
-  /* line 221, src/aglinks.scss */
+  /* line 251, src/aglinks.scss */
   .site-footer .footer-container-tamus a {
     float: right;
   }
-  /* line 226, src/aglinks.scss */
+  /* line 256, src/aglinks.scss */
   .site-footer .req-links li {
     float: left;
     font-size: 0.8em;
@@ -230,20 +261,8 @@
   }
 }
 @media only screen and (max-width: 1023px) {
-  /* line 235, src/aglinks.scss */
+  /* line 265, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme {
     position: static;
-  }
-}
-@media only screen and (min-width: 970px) {
-  /* line 243, src/aglinks.scss */
-  .agl-agency-bar ul {
-    left: 220px;
-  }
-}
-@media only screen and (min-width: 1140px) {
-  /* line 252, src/aglinks.scss */
-  .agl-agency-bar ul {
-    left: 204px;
   }
 }
