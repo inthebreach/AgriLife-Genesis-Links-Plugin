@@ -30,9 +30,6 @@ $nav-item-bgoffset-x: 12;
 --------------------------------------------- */
 .agl-agency-bar {
   display: none;
-  &.executiveprotheme {
-    position: relative;
-  }
 }
 
 .site-footer {
@@ -100,6 +97,12 @@ $nav-item-bgoffset-x: 12;
     display: block;
     position: absolute;
 
+    &.executiveprotheme,
+    &.texas4-h,
+    &.outreachpro {
+      position: relative;
+    }
+    
     &.altitudeprotheme {
       height: #{$nav-item-height + 1}px;
       & ~ .site-container .site-header {
@@ -117,7 +120,6 @@ $nav-item-bgoffset-x: 12;
     }
 
     &.texas4-h {
-      position: relative;
       background-color: $nav-item-bgcolor-tx4h;
 
       .agency-wrap {
