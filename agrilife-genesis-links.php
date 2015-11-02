@@ -17,6 +17,7 @@ define( 'AGL_DIRNAME', 'agrilife-genesis-links' );
 define( 'AGL_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'AGL_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'AGL_DIR_FILE', __FILE__ );
+define( 'AGL_THEME_NAME', strtolower( str_replace( ' ', '', wp_get_theme()->get('Name') ) ) );
 
 // Load the plugin assets
 require_once AGL_DIR_PATH . 'includes/RequiredDOM.php';

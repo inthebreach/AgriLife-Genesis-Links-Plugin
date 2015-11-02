@@ -56,9 +56,8 @@ class RequiredDOM {
      */
     public function add_required_head_content()
     {
-        $arltheme = wp_get_theme()->get('Name');
         ?>
-        <div class="agl-agency-bar <?php echo strtolower(str_replace(' ', '', $arltheme)); ?>">
+        <div class="agl-agency-bar <?php echo AGL_THEME_NAME; ?>">
             <div class="agency-wrap">
                 <ul>
                     <li class="tfs-item"><a href="http://texasforestservice.tamu.edu/"><span>Texas A&amp;M Forest Service</span></a></li>
@@ -80,7 +79,7 @@ class RequiredDOM {
     public function genesis_do_footer()
     {
         ?>
-            <div class="wrap">
+            <div class="wrap agl-footer-wrap <?php echo AGL_THEME_NAME; ?>">
                 <div class="footer-container">
                     <ul class="req-links">
                         <li><a href="http://agrilife.org/required-links/compact/">Compact with Texans</a></li>
