@@ -36,13 +36,6 @@ $nav-item-bgoffset-x: 12;
   .wrap .wrap {
     padding-left: 0;
     padding-right: 0;
-
-    .footer-container {
-      padding-left: 0;
-    }
-    .footer-container-tamus {
-      padding-right: 0;
-    }
   }
   ul {
     margin-left: 0;
@@ -59,7 +52,7 @@ $nav-item-bgoffset-x: 12;
 
   .footer-container {
     //@include grid-column(12);
-    padding-left: 1rem;
+    padding-left: 0;
     padding-right: 1rem;
     width: 100%;
     float: left;
@@ -67,8 +60,8 @@ $nav-item-bgoffset-x: 12;
 
   .footer-container-tamus {
     //@include grid-column(12);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
     float: left;
     height: 82px;
@@ -238,16 +231,14 @@ $nav-item-bgoffset-x: 12;
 
     .footer-container {
       //@include grid-column( $columns: 10, $float: left );
-      padding-left: 1rem;
-      padding-right: 1rem;
       width: 83.33333%;
       float: left;
     }
 
     .footer-container-tamus {
       //@include grid-column( $columns: 2, $float: right );
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 0;
+      padding-right: 0;
       width: 16.66667%;
       float: right;
       a {

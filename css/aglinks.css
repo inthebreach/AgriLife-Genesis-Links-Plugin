@@ -34,14 +34,6 @@
   padding-right: 0;
 }
 /* line 40, src/aglinks.scss */
-.site-footer .wrap .wrap .footer-container {
-  padding-left: 0;
-}
-/* line 43, src/aglinks.scss */
-.site-footer .wrap .wrap .footer-container-tamus {
-  padding-right: 0;
-}
-/* line 47, src/aglinks.scss */
 .site-footer ul {
   margin-left: 0;
   margin-bottom: 0;
@@ -50,32 +42,32 @@
   list-style-position: outside;
   list-style-type: none;
 }
-/* line 60, src/aglinks.scss */
+/* line 53, src/aglinks.scss */
 .site-footer .footer-container {
-  padding-left: 1rem;
+  padding-left: 0;
   padding-right: 1rem;
   width: 100%;
   float: left;
 }
-/* line 68, src/aglinks.scss */
+/* line 61, src/aglinks.scss */
 .site-footer .footer-container-tamus {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0;
+  padding-right: 0;
   width: 100%;
   float: left;
   height: 82px;
 }
-/* line 77, src/aglinks.scss */
+/* line 70, src/aglinks.scss */
 .site-footer .footer-tamus {
   border: 2px solid #f8f8f8;
 }
-/* line 81, src/aglinks.scss */
+/* line 74, src/aglinks.scss */
 .site-footer p {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 45.063em) {
-  /* line 90, src/aglinks.scss */
+  /* line 83, src/aglinks.scss */
   .agl-agency-bar {
     margin: 0 auto;
     width: 100%;
@@ -86,48 +78,48 @@
     display: block;
     position: absolute;
   }
-  /* line 100, src/aglinks.scss */
+  /* line 93, src/aglinks.scss */
   .agl-agency-bar.executiveprotheme, .agl-agency-bar.texas4-h, .agl-agency-bar.outreachpro {
     position: relative;
   }
-  /* line 106, src/aglinks.scss */
+  /* line 99, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme {
     height: 37px;
   }
-  /* line 108, src/aglinks.scss */
+  /* line 101, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme ~ .site-container .site-header {
     top: 36px;
   }
-  /* line 110, src/aglinks.scss */
+  /* line 103, src/aglinks.scss */
   .admin-bar .agl-agency-bar.altitudeprotheme ~ .site-container .site-header {
     top: 68px;
   }
-  /* line 113, src/aglinks.scss */
+  /* line 106, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme ~ .site-container .site-header.dark {
     top: 0;
   }
-  /* line 115, src/aglinks.scss */
+  /* line 108, src/aglinks.scss */
   .admin-bar .agl-agency-bar.altitudeprotheme ~ .site-container .site-header.dark {
     top: 32px;
   }
-  /* line 122, src/aglinks.scss */
+  /* line 115, src/aglinks.scss */
   .agl-agency-bar.texas4-h {
     background-color: #272827;
   }
-  /* line 125, src/aglinks.scss */
+  /* line 118, src/aglinks.scss */
   .agl-agency-bar.texas4-h .agency-wrap {
     float: none;
     margin: 0;
     padding: 0;
     width: auto;
   }
-  /* line 131, src/aglinks.scss */
+  /* line 124, src/aglinks.scss */
   .agl-agency-bar.texas4-h .agency-wrap ul li:after {
     background-color: #272827;
     transform: none;
     box-shadow: none;
   }
-  /* line 139, src/aglinks.scss */
+  /* line 132, src/aglinks.scss */
   .agl-agency-bar .agency-wrap {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -136,18 +128,18 @@
     margin-right: auto;
     width: 71.25rem;
   }
-  /* line 148, src/aglinks.scss */
+  /* line 141, src/aglinks.scss */
   .agl-agency-bar ul {
     margin: 0;
     text-align: center;
   }
-  /* line 152, src/aglinks.scss */
+  /* line 145, src/aglinks.scss */
   .agl-agency-bar ul li {
     display: inline-block;
     position: relative;
     z-index: 5;
   }
-  /* line 157, src/aglinks.scss */
+  /* line 150, src/aglinks.scss */
   .agl-agency-bar ul li:after {
     content: "";
     display: block;
@@ -161,11 +153,11 @@
     box-shadow: 0 0 10px #222;
     background: #5e564e;
   }
-  /* line 170, src/aglinks.scss */
+  /* line 163, src/aglinks.scss */
   .agl-agency-bar ul li:hover:after {
     background-color: #4F5628;
   }
-  /* line 174, src/aglinks.scss */
+  /* line 167, src/aglinks.scss */
   .agl-agency-bar ul li a {
     background: url("../img/agency-nav.png") no-repeat 12px 0;
     cursor: pointer;
@@ -178,81 +170,79 @@
     z-index: 2;
     transition: none 300ms ease-out;
   }
-  /* line 186, src/aglinks.scss */
+  /* line 179, src/aglinks.scss */
   .agl-agency-bar ul li a:hover {
     opacity: 1;
   }
-  /* line 191, src/aglinks.scss */
+  /* line 184, src/aglinks.scss */
   .agl-agency-bar ul li.tvmdl-item {
     z-index: 4;
   }
-  /* line 193, src/aglinks.scss */
+  /* line 186, src/aglinks.scss */
   .agl-agency-bar ul li.tvmdl-item:hover:after {
     background-color: #8C5933;
   }
-  /* line 196, src/aglinks.scss */
+  /* line 189, src/aglinks.scss */
   .agl-agency-bar ul li.tvmdl-item a {
     width: 100px;
     background-position: 12px -36px;
   }
-  /* line 202, src/aglinks.scss */
+  /* line 195, src/aglinks.scss */
   .agl-agency-bar ul li.ext-item {
     z-index: 3;
   }
-  /* line 204, src/aglinks.scss */
+  /* line 197, src/aglinks.scss */
   .agl-agency-bar ul li.ext-item:hover:after {
     background-color: #1B607B;
   }
-  /* line 207, src/aglinks.scss */
+  /* line 200, src/aglinks.scss */
   .agl-agency-bar ul li.ext-item a {
     width: 111px;
     background-position: 12px -72px;
   }
-  /* line 213, src/aglinks.scss */
+  /* line 206, src/aglinks.scss */
   .agl-agency-bar ul li.res-item {
     z-index: 2;
   }
-  /* line 215, src/aglinks.scss */
+  /* line 208, src/aglinks.scss */
   .agl-agency-bar ul li.res-item:hover:after {
     background-color: #5C8C39;
   }
-  /* line 218, src/aglinks.scss */
+  /* line 211, src/aglinks.scss */
   .agl-agency-bar ul li.res-item a {
     width: 109px;
     background-position: 12px -108px;
   }
-  /* line 224, src/aglinks.scss */
+  /* line 217, src/aglinks.scss */
   .agl-agency-bar ul li.college-item {
     z-index: 1;
   }
-  /* line 226, src/aglinks.scss */
+  /* line 219, src/aglinks.scss */
   .agl-agency-bar ul li.college-item:hover:after {
     background-color: #5C0025;
   }
-  /* line 229, src/aglinks.scss */
+  /* line 222, src/aglinks.scss */
   .agl-agency-bar ul li.college-item a {
     background-position: 12px -144px;
   }
 
-  /* line 239, src/aglinks.scss */
+  /* line 232, src/aglinks.scss */
   .site-footer .footer-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
     width: 83.33333%;
     float: left;
   }
-  /* line 247, src/aglinks.scss */
+  /* line 238, src/aglinks.scss */
   .site-footer .footer-container-tamus {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0;
+    padding-right: 0;
     width: 16.66667%;
     float: right;
   }
-  /* line 253, src/aglinks.scss */
+  /* line 244, src/aglinks.scss */
   .site-footer .footer-container-tamus a {
     float: right;
   }
-  /* line 258, src/aglinks.scss */
+  /* line 249, src/aglinks.scss */
   .site-footer .req-links li {
     float: left;
     font-size: 0.8em;
@@ -260,18 +250,18 @@
   }
 }
 @media only screen and (max-width: 1023px) {
-  /* line 267, src/aglinks.scss */
+  /* line 258, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme {
     position: static;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 273, src/aglinks.scss */
+  /* line 264, src/aglinks.scss */
   .site-footer .footer-container {
     padding-right: 0;
   }
 
-  /* line 276, src/aglinks.scss */
+  /* line 267, src/aglinks.scss */
   .footer-container-tamus {
     margin: 1.25rem 0;
   }
