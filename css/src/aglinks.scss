@@ -65,6 +65,16 @@ $nav-item-bgoffset-x: 12;
     width: 100%;
     float: left;
     height: 82px;
+
+    a {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+
+      &:first-child ~ a {
+        margin-left: 1rem;
+      }
+    }
   }
 
   .footer-tamus {
@@ -241,9 +251,6 @@ $nav-item-bgoffset-x: 12;
       padding-right: 0;
       width: 16.66667%;
       float: right;
-      a {
-        float: right;
-      }
     }
 
     .req-links li {
