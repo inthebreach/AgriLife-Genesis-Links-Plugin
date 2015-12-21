@@ -97,7 +97,18 @@ class RequiredDOM {
                     </ul>
                 </div>
                 <div class="footer-container-tamus">
-                    <a href="http://tamus.edu/" title="Texas A&amp;M University System"><img class="footer-tamus" src="http://aglifesciences.tamu.edu/biochemistry2/wp-content/themes/AgriFlex3/img/footer-tamus-maroon.png" alt="Texas A&amp;M University System Member"></a>
+                    <?php
+                        function agl_footer_container_tamus(){
+                            $content = '<a href="http://tamus.edu/" title="Texas A&amp;M University System"><img class="footer-tamus" src="' . AGL_DIR_URL . 'img/footer-tamus-maroon.png" alt="Texas A&amp;M University System Member"></a>';
+                            $output = apply_filters( 'agl_footerlogo', $content );
+                            if ( $output != '' ){
+                                echo $output;
+                            } else {
+                                echo $content;
+                            }
+                        }
+                        agl_footer_container_tamus();
+                    ?>
                 </div>
             </div>
         <?php
