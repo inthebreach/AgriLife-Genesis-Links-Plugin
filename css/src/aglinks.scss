@@ -46,7 +46,7 @@ $nav-item-bgoffset-x: 12;
   }
   ul {
     margin-left: 0;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0;
     font-size: 1rem;
     line-height: 1.6;
     list-style-position: outside;
@@ -266,5 +266,14 @@ $nav-item-bgoffset-x: 12;
 @media only screen and (max-width: 1023px) {
   .agl-agency-bar.altitudeprotheme {
     position: static;
+  }
+}
+
+@media only screen and (max-width: 720px){
+  .site-footer .footer-container {
+    padding-right: 0;
+  }
+  .footer-container-tamus {
+    margin: 1.25rem 0;
   }
 }

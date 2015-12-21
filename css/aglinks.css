@@ -44,7 +44,7 @@
 /* line 47, src/aglinks.scss */
 .site-footer ul {
   margin-left: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.6;
   list-style-position: outside;
@@ -81,7 +81,7 @@
     width: 100%;
     overflow: hidden;
     *zoom: 1;
-    background-color: #5E564E;
+    background-color: #5e564e;
     height: 36px;
     display: block;
     position: absolute;
@@ -159,7 +159,7 @@
     z-index: 1;
     transform: skew(-20deg);
     box-shadow: 0 0 10px #222;
-    background: #5E564E;
+    background: #5e564e;
   }
   /* line 170, src/aglinks.scss */
   .agl-agency-bar ul li:hover:after {
@@ -263,5 +263,16 @@
   /* line 267, src/aglinks.scss */
   .agl-agency-bar.altitudeprotheme {
     position: static;
+  }
+}
+@media only screen and (max-width: 720px) {
+  /* line 273, src/aglinks.scss */
+  .site-footer .footer-container {
+    padding-right: 0;
+  }
+
+  /* line 276, src/aglinks.scss */
+  .footer-container-tamus {
+    margin: 1.25rem 0;
   }
 }
