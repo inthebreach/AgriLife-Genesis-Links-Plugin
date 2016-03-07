@@ -142,6 +142,9 @@ $nav-item-bgoffset-x: 12;
     &.outreachpro .agency-wrap,
     &.executiveprotheme .agency-wrap {
       float: none;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .agency-wrap {
