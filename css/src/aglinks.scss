@@ -139,6 +139,7 @@ $nav-item-bgoffset-x: 12;
       }
     }
 
+    &.outreachpro .agency-wrap,
     &.executiveprotheme .agency-wrap {
       float: none;
     }
@@ -158,6 +159,7 @@ $nav-item-bgoffset-x: 12;
 
       li {
         display: inline-block;
+        line-height: 30px;
         position: relative;
         z-index: 5;
 
