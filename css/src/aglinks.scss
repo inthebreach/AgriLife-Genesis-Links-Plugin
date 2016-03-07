@@ -175,7 +175,8 @@ $nav-item-bgoffset-x: 12;
           top: 0;
           left: 0;
           z-index: 1;
-          transform: skew(-20deg);
+          -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
           box-shadow: 0 0 10px #222;
           background: $nav-item-bgcolor;
         }
