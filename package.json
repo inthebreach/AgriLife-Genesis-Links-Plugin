@@ -8,7 +8,7 @@
 		"compass": "~0.1.1"
 	},
 	"scripts": {
-		"once": "npm run once:packages && npm run once:compass && npm run watch",
+		"once": "npm run once:packages && npm run once:compass && compass compile && npm run watch",
 		"once:packages": "npm install",
 		"once:compass": "compass create --css-dir css --sass-dir css/src --images-dir images --output-style expanded --relative-assets --quiet --bare",
 		
