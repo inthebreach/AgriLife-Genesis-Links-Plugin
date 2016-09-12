@@ -133,8 +133,6 @@ $nav-item-bgoffset-x: 12;
 
         ul li:after {
           background-color: $nav-item-bgcolor-tx4h;
-          transform: none;
-          box-shadow: none;
         }
       }
     }
@@ -199,6 +197,10 @@ $nav-item-bgoffset-x: 12;
           &:hover {
             opacity: 1;
           }
+        }
+
+        &.tfs-item:hover:after {
+          background-color: #4F5628;
         }
 
         &.tvmdl-item {
