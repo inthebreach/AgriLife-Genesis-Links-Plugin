@@ -1,25 +1,22 @@
 {
-  "name": "AgriLife_Required_Links",
+  "name": "AgriLife-Genesis-Links-Plugin",
   "version": "1.0.0",
   "description": "WordPress Plugin of required DOM elements for AgriFlex 3, a child theme of Genesis.",
   "main": "agrilife-required-links.php",
   "repository": "https://github.com/AgriLife/AgriLife-Genesis-Links-Plugin",
-	"devDependencies": {
-		"compass": "~0.1.1"
-	},
-	"scripts": {
-		"once": "npm run once:packages && npm run once:compass && compass compile && npm run watch",
-		"once:packages": "npm install",
-		"once:compass": "compass create --css-dir css --sass-dir css/src --images-dir images --output-style expanded --relative-assets --quiet --bare",
-		
-		"build": "npm run build:css -s",
-		"build:css": "compass compile",
-
-    "package": "npm install && compass compile",
-		
-		"watch": "npm run watch:css -s",
-		"watch:css": "nodemon --quiet --watch css/ --ext scss --exec 'npm run build:css'"
-	},
+  "dependencies": {
+    "grunt": "~0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "~1.0.0",
+    "grunt-contrib-compass": "~1.1.1",
+    "grunt-contrib-compress": "~1.3.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "curlrequest": "~0.3.10",
+    "underscore": "~1.8.3",
+    "grunt-gh-release": "0.0.2",
+    "grunt-gitinfo": "~0.1.8"
+  },
   "author": "Zach Watkins",
   "license": "GPL2+",
   "readmeFilename": "README.md"
