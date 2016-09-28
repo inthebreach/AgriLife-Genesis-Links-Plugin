@@ -1,6 +1,6 @@
 {
   "name": "AgriLife-Genesis-Links-Plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WordPress Plugin of required DOM elements for AgriFlex 3, a child theme of Genesis.",
   "main": "agrilife-required-links.php",
   "repository": "https://github.com/AgriLife/AgriLife-Genesis-Links-Plugin",
@@ -14,8 +14,7 @@
     "grunt-contrib-watch": "~1.0.0",
     "curlrequest": "~0.3.10",
     "underscore": "~1.8.3",
-    "grunt-gh-release": "0.0.2",
-    "grunt-gitinfo": "~0.1.8"
+    "grunt-gh-release": "0.0.2"
   },
   "author": "Zach Watkins",
   "license": "GPL2+",
