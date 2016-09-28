@@ -42,8 +42,8 @@ module.exports = (grunt) ->
         draft: false
         prerelease: false
         asset:
-          name: grunt.file.readJSON('package.json').name + '.zip'
-          file: grunt.file.readJSON('package.json').name + '.zip'
+          name: '<%= pkg.name %>.zip'
+          file: '<%= pkg.name %>.zip'
           'Content-Type': 'application/zip'
 
   @loadNpmTasks 'grunt-contrib-compass'
