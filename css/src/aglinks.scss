@@ -5,8 +5,33 @@ $nav-item-bgcolor-tx4h: #272827;
 $nav-item-pipe-width: 28;
 $nav-item-bgoffset-x: 12;
 
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visuallyhidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  &.focusable:active,
+  &.focusable:focus {
+    clip: auto;
+    position: static;
+    overflow: visible;
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+}
+
 /* Accessibility
 --------------------------------------------- */
+.screen-reader-text {
+  @include visuallyhidden;
+}
+
 .agl-skip-link a {
   border: 0;
   clip: rect(0 0 0 0);
@@ -105,7 +130,7 @@ $nav-item-bgoffset-x: 12;
     &.outreachpro {
       position: relative;
     }
-    
+
     &.altitudeprotheme {
       height: #{$nav-item-height + 1}px;
       & ~ .site-container .site-header {
