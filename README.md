@@ -1,6 +1,6 @@
-![Master branch](https://codeship.com/projects/d0772a40-d81f-0133-7930-2a00185afc36/status?branch=master) on Master branch
+![Master branch](https://codeship.com/projects/64163570-057c-0134-7ba3-3e31f9e0f6b8/status?branch=master) on Master branch
 
-![Staging branch](https://codeship.com/projects/d0772a40-d81f-0133-7930-2a00185afc36/status?branch=staging) on Staging branch
+![Staging branch](https://codeship.com/projects/64163570-057c-0134-7ba3-3e31f9e0f6b8/status?branch=staging) on Staging branch
 
 ## Description
 
