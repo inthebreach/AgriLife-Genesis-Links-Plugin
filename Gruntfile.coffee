@@ -50,7 +50,6 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-watch'
   @loadNpmTasks 'grunt-contrib-compress'
   @loadNpmTasks 'grunt-gh-release'
-  @loadNpmTasks 'grunt-gitinfo'
 
   @registerTask 'develop', ['compass:dev']
   @registerTask 'package', ['compass:dist']
