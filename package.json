@@ -1,6 +1,6 @@
 {
   "name": "AgriLife-Genesis-Links-Plugin",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "WordPress Plugin of required DOM elements for AgriFlex 3, a child theme of Genesis.",
   "main": "agrilife-required-links.php",
   "repository": "https://github.com/AgriLife/AgriLife-Genesis-Links-Plugin",
