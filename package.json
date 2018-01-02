@@ -13,7 +13,8 @@
     "grunt-gh-release": "0.0.2"
   },
   "devDependencies": {
-    "grunt-contrib-watch": "~1.0.0"
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-sass-lint": "^0.2.2"
   },
   "author": "Zach Watkins",
   "license": "GPL2+",
