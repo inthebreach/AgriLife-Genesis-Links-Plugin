@@ -69,10 +69,15 @@ $nav-item-bgoffset-x: 12;
 		line-height: 1.6;
 		list-style-position: outside;
 		list-style-type: none;
-		// font: {
-		//	 family: $footer-font-family;
-		//	 weight: $footer-font-weight;
-		// }
+
+		li {
+			display: inline-block;
+			margin-left: 1rem;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
 	}
 
 	.footer-container {
@@ -294,6 +299,7 @@ $nav-item-bgoffset-x: 12;
 			float: left;
 			font-size: 0.8em;
 			margin: .2em 1em .2em 0;
+			display: inline;
 		}
 	}
 }
