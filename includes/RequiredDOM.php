@@ -8,11 +8,9 @@ class RequiredDOM {
 
         add_action( 'wp_head', array( $this, 'add_skip_nav_link') );
 
-        if(AGL_THEME_NAME != 'texas4-h'){
-            add_action( 'genesis_before', array( $this, 'add_required_head_content'), 2 );
-        } else {
+        if(AGL_THEME_NAME == 'texas4-h'){
             add_action( 'genesis_footer', array( $this, 'add_required_head_content'), 2 );
-        }
+        } 
 
         add_action( 'genesis_setup', array( $this, 'remove_default_footer' ) );
 
