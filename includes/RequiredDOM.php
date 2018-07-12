@@ -2,19 +2,35 @@
 
 class RequiredDOM {
 
+    private $agencies;
+    private $university_links;
+
     public function __construct() {
+
+        $this->agencies = wpsf_get_setting( 'agl_req_links', 'general', 'agencies' );
+        $this->university_links = wpsf_get_setting( 'agl_req_links', 'general', 'university_links' );
 
         add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 
         add_action( 'wp_head', array( $this, 'add_skip_nav_link') );
 
-        if(AGL_THEME_NAME == 'texas4-h'){
+        if( empty( $this->agencies ) || $this->agencies === 'header' ){
+
+            add_action( 'genesis_header', array( $this, 'add_required_head_content'), 2 );
+
+        } else if( $this->agencies === 'pre_footer' ){
+
             add_action( 'genesis_footer', array( $this, 'add_required_head_content'), 2 );
-        } 
 
-        add_action( 'genesis_setup', array( $this, 'remove_default_footer' ) );
+        }
 
-        add_action( 'genesis_footer', array( $this, 'genesis_do_footer' ), 6 );
+        if( empty( $this->university_links ) || $this->university_links === 'footer' ){
+
+            add_action( 'genesis_setup', array( $this, 'remove_default_footer' ) );
+
+            add_action( 'genesis_footer', array( $this, 'genesis_do_footer' ), 6 );
+
+        }
 
     }
 
@@ -24,8 +40,10 @@ class RequiredDOM {
      * @return HTML
      */
     function register_plugin_styles() {
+
         wp_register_style( 'aglinks-plugin', AGL_DIR_URL . 'css/aglinks.css' );
         wp_enqueue_style( 'aglinks-plugin' );
+
     }
 
     /**
@@ -34,7 +52,9 @@ class RequiredDOM {
      * @return void
      */
     function remove_default_footer() {
+
         remove_action( 'genesis_footer', 'genesis_do_footer' );
+
     }
 
     /**
@@ -44,11 +64,13 @@ class RequiredDOM {
      */
     public function add_skip_nav_link()
     {
+
         ?>
         <div class="agl-skip-link">
         <a href="#content" title="Skip to content" tabindex="1">Skip to content</a>
         </div>
         <?php
+
     }
 
     /**
@@ -60,13 +82,13 @@ class RequiredDOM {
     {
 
         $output = <<<EOT
-        <div class="agl-agency-bar {AGL_THEME_NAME}">
-            <div class="agency-wrap">
-                <ul>
-                    <li class="tfs-item"><a href="http://texasforestservice.tamu.edu/"><span>Texas A&amp;M Forest Service</span></a></li><li class="tvmdl-item"><a href="http://tvmdl.tamu.edu/"><span>Texas A&amp;M Veterinary Medical Diagnostics Laboratory</span></a></li><li class="ext-item"><a href="http://agrilifeextension.tamu.edu/"><span>Texas A&amp;M AgriLife Extension Service</span></a></li><li class="res-item"><a href="http://agriliferesearch.tamu.edu/"><span>Texas A&amp;M AgriLife Research</span></a></li><li class="college-item"><a href="http://aglifesciences.tamu.edu/"><span>Texas A&amp;M College of Agrculture and Life Sciences</span></a></li>
-                </ul>
+            <div class="agl-agency-bar {AGL_THEME_NAME}">
+                <div class="agency-wrap">
+                    <ul>
+                        <li class="tfs-item"><a href="http://texasforestservice.tamu.edu/"><span>Texas A&amp;M Forest Service</span></a></li><li class="tvmdl-item"><a href="http://tvmdl.tamu.edu/"><span>Texas A&amp;M Veterinary Medical Diagnostics Laboratory</span></a></li><li class="ext-item"><a href="http://agrilifeextension.tamu.edu/"><span>Texas A&amp;M AgriLife Extension Service</span></a></li><li class="res-item"><a href="http://agriliferesearch.tamu.edu/"><span>Texas A&amp;M AgriLife Research</span></a></li><li class="college-item"><a href="http://aglifesciences.tamu.edu/"><span>Texas A&amp;M College of Agrculture and Life Sciences</span></a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
 EOT;
 
         $output = str_replace('{AGL_THEME_NAME}', AGL_THEME_NAME, $output);
@@ -74,6 +96,7 @@ EOT;
         $output = apply_filters('agrilife_required_head_content', $output);
 
         echo $output;
+
     }
 
     /**
@@ -83,6 +106,7 @@ EOT;
      */
     public function genesis_do_footer()
     {
+
         ?>
             <div class="wrap agl-footer-wrap <?php echo AGL_THEME_NAME; ?>">
                 <div class="footer-container">
