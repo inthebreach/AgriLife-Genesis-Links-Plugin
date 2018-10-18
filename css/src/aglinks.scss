@@ -60,13 +60,11 @@ $nav-item-bgoffset-x: 12;
 }
 
 .site-footer.agl-footer-wrap {
-	padding: 16px 0;
 	text-transform: capitalize;
 	text-align: center;
 
-	.wrap .wrap {
-		padding-left: 0;
-		padding-right: 0;
+	.wrap {
+		padding: 16px;
 	}
 
 	ul {
@@ -302,6 +300,11 @@ $nav-item-bgoffset-x: 12;
 
 	.site-footer.agl-footer-wrap {
 		text-align: left;
+
+		.wrap {
+			padding-left: 0;
+			padding-right: 0;
+		}
 
 		.footer-container {
 			width: 83.33333%;
