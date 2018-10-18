@@ -15,6 +15,7 @@ $nav-item-bgoffset-x: 12;
 	padding: 0;
 	width: 1px;
 	height: 1px;
+
 	&.focusable:active,
 	&.focusable:focus {
 		clip: auto;
@@ -41,6 +42,7 @@ $nav-item-bgoffset-x: 12;
 	padding: 0;
 	width: 1px;
 	height: 1px;
+
 	&:focus {
 		clip: auto;
 		position: static;
@@ -57,18 +59,28 @@ $nav-item-bgoffset-x: 12;
 	display: none;
 }
 
-.site-footer {
+.site-footer.agl-footer-wrap {
+	padding: 16px 0;
+	text-transform: capitalize;
+	text-align: center;
+
 	.wrap .wrap {
 		padding-left: 0;
 		padding-right: 0;
 	}
+
 	ul {
 		margin-left: 0;
 		margin-bottom: 0;
-		font-size: 1rem;
 		line-height: 1.6;
 		list-style-position: outside;
 		list-style-type: none;
+		text-align: center;
+		font-size: 10pt;
+
+		@media only screen and (min-width: 1000px) {
+			font-size: 11pt;
+		}
 
 		li {
 			display: inline-block;
@@ -81,7 +93,6 @@ $nav-item-bgoffset-x: 12;
 	}
 
 	.footer-container {
-		//@include grid-column(12);
 		padding-left: 0;
 		padding-right: 1rem;
 		width: 100%;
@@ -89,11 +100,10 @@ $nav-item-bgoffset-x: 12;
 	}
 
 	.footer-container-tamus {
-		//@include grid-column(12);
 		padding-left: 0;
 		padding-right: 0;
 		width: 100%;
-		float: left;
+		display: inline-block;
 		height: 82px;
 
 		a {
@@ -117,24 +127,33 @@ $nav-item-bgoffset-x: 12;
 
 }
 
-//@media #{$medium-up} {
-@media only screen and (min-width: 45.063em) {
+@media only screen and (max-width: 720px) {
+	.site-footer.agl-footer-wrap {
+		.footer-container {
+			padding-right: 0;
+		}
 
+		.footer-container-tamus {
+			margin: 1.25rem 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.agl-agency-bar.altitudeprotheme {
+		position: static;
+	}
+}
+
+@media only screen and (min-width: 45.063em) {
 	.agl-agency-bar {
 		margin: 0 auto;
 		width: 100%;
 		overflow: hidden;
-		// *zoom: 1;
 		background-color: $nav-item-bgcolor;
 		height: #{$nav-item-height}px;
 		display: block;
-		position: absolute;
-
-		&.executiveprotheme,
-		&.texas4-h,
-		&.outreachpro {
-			position: relative;
-		}
+		position: relative;
 
 		&.altitudeprotheme {
 			height: #{$nav-item-height + 1}px;
@@ -167,14 +186,6 @@ $nav-item-bgoffset-x: 12;
 			}
 		}
 
-		&.outreachpro .agency-wrap,
-		&.executiveprotheme .agency-wrap {
-			float: none;
-			width: 100%;
-			padding-left: 0;
-			padding-right: 0;
-		}
-
 		.agency-wrap {
 			padding-left: 1rem;
 			padding-right: 1rem;
@@ -182,6 +193,15 @@ $nav-item-bgoffset-x: 12;
 			margin-left: auto;
 			margin-right: auto;
 			width: 71.25rem;
+		}
+
+		&.outreachpro .agency-wrap,
+		&.executiveprotheme .agency-wrap,
+		&.corporatepro .agency-wrap {
+			float: none;
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
 		}
 
 		ul {
@@ -208,6 +228,7 @@ $nav-item-bgoffset-x: 12;
 					box-shadow: 0 0 10px #222;
 					background: $nav-item-bgcolor;
 				}
+
 				&:hover:after {
 					background-color: #4F5628;
 				}
@@ -279,42 +300,26 @@ $nav-item-bgoffset-x: 12;
 		}
 	}
 
-	.site-footer {
+	.site-footer.agl-footer-wrap {
+		text-align: left;
 
 		.footer-container {
-			//@include grid-column( $columns: 10, $float: left );
 			width: 83.33333%;
 			float: left;
 		}
 
 		.footer-container-tamus {
-			//@include grid-column( $columns: 2, $float: right );
 			padding-left: 0;
 			padding-right: 0;
 			width: 16.66667%;
 			float: right;
+			text-align: center;
 		}
 
 		.req-links li {
 			float: left;
-			font-size: 0.8em;
 			margin: .2em 1em .2em 0;
 			display: inline;
 		}
-	}
-}
-
-@media only screen and (max-width: 1023px) {
-	.agl-agency-bar.altitudeprotheme {
-		position: static;
-	}
-}
-
-@media only screen and (max-width: 720px) {
-	.site-footer .footer-container {
-		padding-right: 0;
-	}
-	.footer-container-tamus {
-		margin: 1.25rem 0;
 	}
 }
