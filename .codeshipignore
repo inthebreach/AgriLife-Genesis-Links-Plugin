@@ -44,8 +44,6 @@ Thumbs.db
 
 # Directories that may or may not exist in repo AND should not be on the server
 package.json
-known-issues.json
-vipscan.json
 config.rb
 node_modules
 .sass-cache
@@ -63,4 +61,4 @@ Gruntfile.coffee
 werker.yml
 .editorconfig
 css/src
-AgriLife-Genesis-Links-Plugin.zip
+*.zip
