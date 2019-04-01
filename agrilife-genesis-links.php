@@ -3,7 +3,7 @@
  * Plugin Name: AgriLife Genesis Links
  * Plugin URI: https://github.com/AgriLife/AgriLife-Genesis-Links-Plugin
  * Description: Required links in the header and footer for AgriLife websites
- * Version: 1.0.0
+ * Version: 1.2.4
  * Author: Zach Watkins
  * Author URI: https://github.com/ZachWatkins
  * Author Email: zachary.watkins@ag.tamu.edu
