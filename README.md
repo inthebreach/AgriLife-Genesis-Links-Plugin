@@ -13,9 +13,9 @@ This plugin provides the header links, footer links, and a "skip navigation" lin
 ## Development Installation
 
 1. Copy this repo to the desired location.
-2. In your terminal, navigate to the plugin location 'cd /path/to/the/plugin'
-3. Run 'npm install' to set up the grunt modules
-4. Run 'grunt watch' and do what you do best
+2. In your terminal, navigate to the plugin location 'cd /path/to/the/plugin'.
+3. Run 'npm start' to set up the repository for production environments.
+3. Or run 'npm start -- develop' to set up the repository for development environments.
 
 ## Development Notes
 
