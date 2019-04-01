@@ -32,23 +32,22 @@ module.exports = (grunt) ->
     compress:
       main:
         options:
-          archive: 'AgriLife-Genesis-Links-Plugin.zip'
+          archive: '<%= pkg.name %>.zip'
         files: [
           {src: ['css/*.css']},
           {src: ['img/**']},
           {src: ['includes/**']},
-          {src: ['agrilife-genesis-links.php']},
+          {src: ['*.php']},
           {src: ['README.md']},
         ]
 
   @loadNpmTasks 'grunt-contrib-compass'
   @loadNpmTasks 'grunt-contrib-compress'
-  @loadNpmTasks 'grunt-sass-lint'
   @loadNpmTasks 'grunt-contrib-watch'
+  @loadNpmTasks 'grunt-sass-lint'
 
-  @registerTask 'default', ['sasslint', 'compass:dev']
-  @registerTask 'develop', ['compass:dev', 'sasslint']
-  @registerTask 'package', ['compass:pkg']
+  @registerTask 'default', ['sasslint', 'compass:pkg']
+  @registerTask 'develop', ['sasslint', 'compass:dev']
   @registerTask 'release', ['compress', 'makerelease']
   @registerTask 'makerelease', 'Set release branch for use in the release task', ->
     done = @async()
