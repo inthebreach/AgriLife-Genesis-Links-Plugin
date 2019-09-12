@@ -10,9 +10,9 @@ class RequiredDOM {
         $this->agencies = wpsf_get_setting( 'agl_req_links', 'general', 'agencies' );
         $this->university_links = wpsf_get_setting( 'agl_req_links', 'general', 'university_links' );
 
-        add_action( 'wp_head', array( $this, 'add_skip_nav_link') );
-
-
+        add_theme_support( 'genesis-accessibility', array(
+            'skip-links',
+        ) );
 
         add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 
