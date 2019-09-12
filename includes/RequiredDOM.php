@@ -51,7 +51,13 @@ class RequiredDOM {
      */
     function register_plugin_styles() {
 
-        wp_register_style( 'aglinks-plugin', AGL_DIR_URL . 'css/aglinks.css' );
+        wp_register_style(
+            'aglinks-plugin',
+            AGL_DIR_URL . 'css/aglinks.css',
+            false,
+            filemtime( AGL_DIR_PATH . '/css/aglinks.css' ),
+            'screen'
+        );
         wp_enqueue_style( 'aglinks-plugin' );
 
     }
