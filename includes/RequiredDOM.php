@@ -22,6 +22,26 @@ class RequiredDOM {
 
         }
 
+        add_filter( 'genesis_attr_sidebar-primary', array( $this, 'genesis_attributes_sidebar_primary' ), 11 );
+
+    }
+
+    /**
+     * Add attributes for primary sidebar element.
+     *
+     * @since 1.2.8
+     *
+     * @param array $attributes Existing attributes for primary sidebar element.
+     * @return array Amended attributes for primary sidebar element.
+     */
+    public function genesis_attributes_sidebar_primary( $attributes ) {
+
+        if ( array_key_exists( 'role', $attributes ) ) {
+            unset( $attributes['role'] );
+        }
+
+        return $attributes;
+
     }
 
     /**
