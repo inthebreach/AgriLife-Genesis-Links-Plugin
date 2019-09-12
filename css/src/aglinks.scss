@@ -52,12 +52,12 @@ $nav-item-bgoffset-x: 12;
 /* Header and Footer Navigation
 --------------------------------------------- */
 
-.site-footer.agl-footer-wrap {
+.agl-footer-wrap {
 	text-transform: capitalize;
 	text-align: center;
 
 	.wrap {
-		padding: 16px;
+		padding: 16px 0 0;
 	}
 
 	ul {
@@ -119,7 +119,7 @@ $nav-item-bgoffset-x: 12;
 }
 
 @media only screen and (max-width: 720px) {
-	.site-footer.agl-footer-wrap {
+	.agl-footer-wrap {
 		.footer-container {
 			padding-right: 0;
 		}
@@ -131,7 +131,7 @@ $nav-item-bgoffset-x: 12;
 }
 
 @media only screen and (min-width: 45.063em) {
-	.site-footer.agl-footer-wrap {
+	.agl-footer-wrap {
 		text-align: left;
 
 		.wrap {

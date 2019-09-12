@@ -18,9 +18,7 @@ class RequiredDOM {
 
         if( empty( $this->university_links ) || $this->university_links === 'footer' ){
 
-            add_action( 'genesis_setup', array( $this, 'remove_default_footer' ) );
-
-            add_action( 'genesis_footer', array( $this, 'genesis_do_footer' ), 99 );
+            add_action( 'genesis_footer', array( $this, 'genesis_do_footer' ), 11 );
 
         }
 
@@ -39,17 +37,6 @@ class RequiredDOM {
     }
 
     /**
-     * Removes existing footer content
-     *
-     * @return void
-     */
-    function remove_default_footer() {
-
-        remove_action( 'genesis_footer', 'genesis_do_footer' );
-
-    }
-
-    /**
      * Provides the footer links
      *
      * @return HTML
@@ -58,7 +45,7 @@ class RequiredDOM {
     {
 
         ?>
-            <div class="site-footer agl-footer-wrap <?php echo AGL_THEME_NAME; ?>">
+            <div class="agl-footer-wrap <?php echo AGL_THEME_NAME; ?>">
                 <div class="wrap">
                     <div class="footer-container">
                         <ul class="req-links">
