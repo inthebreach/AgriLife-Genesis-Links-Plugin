@@ -1,4 +1,5 @@
 module.exports = (grunt) ->
+  sass = require 'node-sass'
   @initConfig
     pkg: @file.readJSON('package.json')
     release:
@@ -13,18 +14,23 @@ module.exports = (grunt) ->
         '**/*.scss'
       ]
       tasks: ['develop']
-    compass:
+    sass:
       pkg:
         options:
-          config: 'config.rb'
-          force: true
+          implementation: sass
+          noSourceMap: true
+          outputStyle: 'compressed'
+          precision: 2
+        files:
+          'css/aglinks.css': 'css/src/aglinks.scss'
       dev:
         options:
-          config: 'config.rb'
-          force: true
-          outputStyle: 'expanded'
-          sourcemap: true
-          noLineComments: true
+          implementation: sass
+          sourceMap: true
+          outputStyle: 'nested'
+          precision: 2
+        files:
+          'css/aglinks.css': 'css/src/aglinks.scss'
     sasslint:
       options:
         configFile: '.sass-lint.yml'
@@ -41,13 +47,13 @@ module.exports = (grunt) ->
           {src: ['README.md']},
         ]
 
-  @loadNpmTasks 'grunt-contrib-compass'
   @loadNpmTasks 'grunt-contrib-compress'
   @loadNpmTasks 'grunt-contrib-watch'
+  @loadNpmTasks 'grunt-sass'
   @loadNpmTasks 'grunt-sass-lint'
 
-  @registerTask 'default', ['sasslint', 'compass:pkg']
-  @registerTask 'develop', ['sasslint', 'compass:dev']
+  @registerTask 'default', ['sasslint', 'sass:pkg']
+  @registerTask 'develop', ['sasslint', 'sass:dev']
   @registerTask 'release', ['compress', 'makerelease']
   @registerTask 'makerelease', 'Set release branch for use in the release task', ->
     done = @async()
