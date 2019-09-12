@@ -46,14 +46,33 @@ module.exports = (grunt) ->
           {src: ['*.php']},
           {src: ['README.md']},
         ]
+    postcss:
+      pkg:
+        options:
+          processors: [
+            require('autoprefixer')()
+          ]
+          failOnError: true
+        files:
+          'css/aglinks.css': 'css/aglinks.css'
+      dev:
+        options:
+          map: true
+          processors: [
+            require('autoprefixer')()
+          ]
+          failOnError: true
+        files:
+          'css/aglinks.css': 'css/aglinks.css'
 
   @loadNpmTasks 'grunt-contrib-compress'
   @loadNpmTasks 'grunt-contrib-watch'
   @loadNpmTasks 'grunt-sass'
   @loadNpmTasks 'grunt-sass-lint'
+  @loadNpmTasks 'grunt-postcss'
 
-  @registerTask 'default', ['sasslint', 'sass:pkg']
-  @registerTask 'develop', ['sasslint', 'sass:dev']
+  @registerTask 'default', ['sasslint', 'sass:pkg', 'postcss:pkg']
+  @registerTask 'develop', ['sasslint', 'sass:dev', 'postcss:dev']
   @registerTask 'release', ['compress', 'makerelease']
   @registerTask 'makerelease', 'Set release branch for use in the release task', ->
     done = @async()
