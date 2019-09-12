@@ -18,6 +18,8 @@ class RequiredDOM {
 
         if( empty( $this->university_links ) || $this->university_links === 'footer' ){
 
+            add_action( 'genesis_setup', array( $this, 'remove_default_footer' ) );
+
             add_action( 'genesis_footer', array( $this, 'genesis_do_footer' ), 11 );
 
         }
@@ -59,6 +61,17 @@ class RequiredDOM {
             'screen'
         );
         wp_enqueue_style( 'aglinks-plugin' );
+
+    }
+
+    /**
+     * Removes existing footer content
+     *
+     * @return void
+     */
+    function remove_default_footer() {
+
+        remove_action( 'genesis_footer', 'genesis_do_footer' );
 
     }
 
