@@ -4,7 +4,7 @@
 
 ## Description
 
-This plugin provides the header links, footer links, and a "skip navigation" link (for accessibility) required for AgriLife websites using Genesis child themes created by StudioPress. It adds a menu item for administrators under the Settings menu named "AgriLife Links" which allows them to enable or disable the agency links in the header and required links in the footer.
+This plugin provides the header links, footer links, and a "skip navigation" link (for accessibility) required for AgriLife websites using Genesis child themes created by StudioPress. It adds a menu item for administrators under the Settings menu named "AgriLife Links" which allows them to enable or disable the agency links in the header and required links in the footer. Other accessibility changes may be included.
 
 ## WordPress Requirements
 
